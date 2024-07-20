@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rémy Guillermin Photographie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/gear.css">
+</head>
+<body>
+    <header>
+        <h1 data-lang="fr">Mon équipement</h1>
+        <h2> </h2>
+    </header>
+    <nav>
+        <a href="index.html" class="nav-item">Accueil</a>
+        <a class="current-nav-item">Mon équipement</a>
+        <a href="https://www.instagram.com/r_guillermin?igsh=MWoycGZzM2hkZ3Jneg%3D%3D&utm_source=qr" class="nav-item" target="_blank">Mon Instagram</a>
+        <a href="about.html" class="nav-item">À propos de moi</a>
+    </nav>
+    <main>
+        <section id="current-gear">
+            <h3>Mon Équipement Actuel</h3>
+            <div class="carousel-container">
+                <button class="carousel-button prev" onclick="moveCarousel('current-gear', -1)" aria-label="Previous">&#10094;</button>
+                <ul class="gear-list">
+                    <li class="gear-card">
+                        <article>
+                            <img src="data/medias/gear/NIKOND3500.png" alt="Nikon D3500">
+                            <h4>Nikon D3500</h4>
+                        </article>
+                    </li>
+                    <li class="gear-card">
+                        <article>
+                            <img src="data/medias/gear/GoPro9.png" alt="GoPro Hero 9 Black">
+                            <h4>GoPro Hero 9 Black</h4>
+                        </article>
+                    </li>
+                    <li class="gear-card">
+                        <article>
+                            <img src="data/medias/gear/DJIAir3.png" alt="DJI Air 3">
+                            <h4>DJI Air 3 Drone</h4>
+                         </article>
+                    </li>
+                    <li class="gear-card">
+                        <article>
+                            <img src="data/medias/gear/NIKKOR35mmDX.png" alt="NIKKOR 35 mm">
+                            <h4>Nikon Objectif AF-S DX 35 mm f/1,8G</h4>
+                        </article>
+                    </li>
+                    <li class="gear-card">
+                        <article>
+                            <img src="data/medias/gear/NIKKOR18-55mmDX.png" alt="NIKKOR 18-55mm DX">
+                            <h4>Nikon Objectif AF-P DX 18-55mm f/3.5-5.6G VR</h4>
+                        </article>
+                    </li>
+                    <li class="gear-card">
+                        <article>
+                            <img src="data/medias/gear/TAMRON70-300mmDX.png" alt="TAMRON 70-300 mm">
+                            <h4>Tamron Objectif AF 70-300mm F/4-5,6</h4>
+                        </article>
+                    </li>
+                    <li class="gear-card">
+                        <article>
+                            <img src="data/medias/gear/SHIMODAActionX30V2.png" alt="Shimoda Action X30 V2">
+                            <h4>Sac à dos Shimoda Action X30 V2</h4>
+                        </article>
+                    </li>
+                    <!-- Ajoutez plus d'éléments d'équipement actuel ici si nécessaire -->
+                </ul>
+                <button class="carousel-button next" onclick="moveCarousel('current-gear', 1)" aria-label="Next">&#10095;</button>
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot" onclick="moveToSlide('current-gear', 0)" aria-label="Slide 1"></span>
+                <span class="dot" onclick="moveToSlide('current-gear', 1)" aria-label="Slide 2"></span>
+                <span class="dot" onclick="moveToSlide('current-gear', 2)" aria-label="Slide 3"></span>
+                <span class="dot" onclick="moveToSlide('current-gear', 3)" aria-label="Slide 4"></span>
+                <span class="dot" onclick="moveToSlide('current-gear', 4)" aria-label="Slide 5"></span>
+                <span class="dot" onclick="moveToSlide('current-gear', 5)" aria-label="Slide 6"></span>
+                <span class="dot" onclick="moveToSlide('current-gear', 6)" aria-label="Slide 7"></span>
+                <!-- Ajoutez plus de dots ici si nécessaire -->
+            </div>
+        </section>
+        <section id="old-gear">
+            <h3>Mon Ancien Équipement</h3>
+            <div class="carousel-container">
+                <button class="carousel-button prev" onclick="moveCarousel('old-gear', -1)" aria-label="Previous">&#10094;</button>
+                <ul class="gear-list">
+                    <li class="gear-card">
+                        <article>
+                            <h4>Pas d'équipement</h4>
+                        </article>
+                    </li>
+                    <!-- Ajoutez plus d'éléments d'ancien équipement ici -->
+                </ul>
+                <button class="carousel-button next" onclick="moveCarousel('old-gear', 1)" aria-label="Next">&#10095;</button>
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot" onclick="moveToSlide('old-gear', 0)" aria-label="Slide 1"></span>
+                <!-- Ajoutez plus de dots ici si nécessaire -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Rémy Guillermin. Tous droits réservés.</p>
+    </footer>
+    <script src="scripts/carousel.js"></script>
+</body>
+</html>

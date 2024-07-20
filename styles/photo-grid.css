@@ -1,0 +1,27 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 25%;
+    max-width: 400px;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.column img:hover {
+    transform: scale(1.02);
+}

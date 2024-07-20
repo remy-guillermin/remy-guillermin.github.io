@@ -1,0 +1,46 @@
+.trip-grid {
+    display: flex;
+    width: 980px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.trip-grid figure {
+    position: relative;
+    margin: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.trip-grid img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.trip-grid figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--background-color);
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.trip-grid figure:hover img {
+    transform: scale(1.2);
+    filter: blur(5px);
+}
+
+.trip-grid figure:hover figcaption {
+    opacity: 1;
+}
