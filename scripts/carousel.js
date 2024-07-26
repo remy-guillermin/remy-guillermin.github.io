@@ -26,13 +26,14 @@ function moveCarousel(sectionId, direction) {
 function moveToSlide(sectionId, index) {
     const section = document.getElementById(sectionId);
     const gearList = section.querySelector('.gear-list');
-    const items = gearList.querySelectorAll('.gear-card');
-    const itemWidth = items[0].getBoundingClientRect().width;
-
-    updateActiveGear(sectionId);
+    const itemWidth = gearList.querySelectorAll('.gear-card.aux')[0].getBoundingClientRect().width;
 
     currentIndex[sectionId] = index;
-    const offset = -currentIndex[sectionId] * itemWidth;
+    
+    updateActiveGear(sectionId);
+
+    const offset = -currentIndex[sectionId] * (itemWidth + 20);
+    console.log(offset, currentIndex);
     gearList.style.transform = `translateX(${offset}px)`;
 
     updateIndicators(sectionId);
